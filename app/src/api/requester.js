@@ -1,6 +1,24 @@
+import { getAccessToken } from '../utils.js';
+
 function request(url, options) {
     return fetch(url, options)
-    .then(body => body.json())
+    .then(response => {
+        if (!response.ok) {
+            response.json()
+            .then(error => {
+                const errorMessage = error['message'];
+                throw new Error(errorMessage);
+            })
+            .catch(err => {
+                alert(err);
+                throw new Error(err);
+            })
+        } else if (response.status == 204) {
+            return response
+        } else {
+            return response.json();
+        }
+    })
 }
 
 function createOptions(method='GET', data) {
@@ -15,6 +33,10 @@ function createOptions(method='GET', data) {
     }
 
     // check if is authorized and if is add the X-Authorization token to the option headers
+    let accessToken = getAccessToken();
+    if (Boolean(accessToken)) {
+        options['headers']['X-Authorization'] = accessToken;
+    }
 
     return options;
 }
