@@ -15,7 +15,11 @@ const navTemplate = (model) => html`
         </li>
         ${model['isAuthorized']
       ? html`
-      <li class="nav-item">
+        <li class="nav-item">
+          <a class="nav-link ${model['currentPath'] == '/add-supplement' ? 'active' : ''}" aria-current="page" href="/add-supplement">Add Supplement</a>
+        </li>
+
+        <li class="nav-item">
           <a class="nav-link" href="javascript:void(0)" @click=${model['logoutHandler']}>Logout</a>
         </li>
       `
@@ -45,7 +49,6 @@ function logoutHandler() {
 
 function viewNav(cntxt, next) {
   context = cntxt;
-  console.log(context);
   let viewModel = {
     logoutHandler,
     currentPath: context.pathname,
