@@ -7,6 +7,7 @@ import supplements from './views/supplements.js';
 import navigation from './views/navigation.js';
 import addSupplement from './views/addSupplement.js';
 import supplementDetails from './views/supplementDetails.js';
+import updateSupplement from './views/updateSupplement.js';
 
 
 let mainContainer = document.querySelector('.main-container');
@@ -21,6 +22,8 @@ page('/login', login.viewPage);
 page('/register', register.viewPage);
 page('/add-supplement', addSupplement.viewPage);
 page('/supplements/:id', supplementDetails.viewPage);
+page('/supplements/update/:id', updateSupplement.viewPage);
+
 
 page.start();
 

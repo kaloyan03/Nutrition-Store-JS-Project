@@ -2,7 +2,7 @@ import { html, nothing } from '../lib.js';
 
 import { logoutUser } from '../services/authService.js';
 import { clearSessionStorage } from '../utils.js';
-import { getAccessToken } from '../utils.js';
+import { getAccessToken, getUserEmail } from '../utils.js';
 
 const navTemplate = (model) => html`
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -21,6 +21,10 @@ const navTemplate = (model) => html`
 
         <li class="nav-item">
           <a class="nav-link" href="javascript:void(0)" @click=${model['logoutHandler']}>Logout</a>
+        </li>
+
+        <li class="nav-item">
+          <p class="nav-link" style="font-weight: bold; padding-left: 1100px;">Hello, ${model['email']}</p>
         </li>
       `
       : html`
@@ -53,6 +57,7 @@ function viewNav(cntxt, next) {
     logoutHandler,
     currentPath: context.pathname,
     isAuthorized: Boolean(getAccessToken()),
+    email: getUserEmail(),
   }
 
   let templateResult = navTemplate(viewModel);

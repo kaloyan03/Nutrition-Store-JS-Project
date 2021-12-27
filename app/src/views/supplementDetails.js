@@ -12,6 +12,9 @@ const supplementDetailsTemplate = (model) => html`
     <p class="card-text">Brand: ${model['supplementData']['brand']}</p>
     <p class="card-text">Description: ${model['supplementData']['description']}</p>
     <p class="card-text">Category: ${model['supplementData']['category']}</p>
+    <a href="/supplements/update/${model['supplementData']['_id']}" class="btn btn-warning">Update</a>
+    <a class="btn btn-danger">Delete</a>
+    <a class="btn btn-success">Buy</a>
   </div>
 </div>
 </section>
