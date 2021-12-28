@@ -13,6 +13,10 @@ const navTemplate = (model) => html`
         <li class="nav-item">
           <a class="nav-link ${model['currentPath'] == '/supplements' ? 'active' : ''}" aria-current="page" href="/supplements">Supplements</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link ${model['currentPath'] == '/calorie-intake-calculator' ? 'active' : ''}" aria-current="page" href="/calorie-intake-calculator">Calculate Caloric Needs</a>
+        </li>
         ${model['isAuthorized']
       ? html`
         <li class="nav-item">
@@ -24,7 +28,7 @@ const navTemplate = (model) => html`
         </li>
 
         <li class="nav-item">
-          <p class="nav-link" style="font-weight: bold; padding-left: 1100px;">Hello, ${model['email']}</p>
+          <p class="nav-link" style="font-weight: bold; position: absolute; right: 40px;">Hello, ${model['email']}</p>
         </li>
       `
       : html`

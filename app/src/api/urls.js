@@ -5,3 +5,4 @@ export const supplementsUrl = 'http://localhost:3030/jsonstore/supplements';
 export const addSupplementUrl = 'http://localhost:3030/jsonstore/supplements';
 export const updateSupplementUrl = (id) => `http://localhost:3030/jsonstore/supplements/${id}`;
 export const getSupplementUrl = (id) => `http://localhost:3030/jsonstore/supplements/${id}`;
+export const deleteSupplementUrl = (id) => `http://localhost:3030/jsonstore/supplements/${id}`;

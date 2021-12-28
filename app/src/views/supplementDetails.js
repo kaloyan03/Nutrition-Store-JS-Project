@@ -1,6 +1,7 @@
 import { html, nothing } from '../lib.js';
 
-import { getSupplement } from '../services/supplementsService.js';
+import { getSupplement, deleteSupplement } from '../services/supplementsService.js';
+import { getUserId } from '../utils.js';
 
 const supplementDetailsTemplate = (model) => html`
 <section class='supplement-details-page' style="max-width:600px; margin: 50px auto;">
@@ -12,8 +13,12 @@ const supplementDetailsTemplate = (model) => html`
     <p class="card-text">Brand: ${model['supplementData']['brand']}</p>
     <p class="card-text">Description: ${model['supplementData']['description']}</p>
     <p class="card-text">Category: ${model['supplementData']['category']}</p>
+    ${model['isOwner']
+    ? html`
     <a href="/supplements/update/${model['supplementData']['_id']}" class="btn btn-warning">Update</a>
-    <a class="btn btn-danger">Delete</a>
+    <a class="btn btn-danger" href="javascript:void(0)" @click=${model['deleteHandler']}>Delete</a>
+    `
+    : nothing}
     <a class="btn btn-success">Buy</a>
   </div>
 </div>
@@ -23,18 +28,32 @@ const supplementDetailsTemplate = (model) => html`
 let context = undefined;
 let supplementId = undefined;
 
+function deleteHandler() {
+    deleteSupplement(supplementId)
+    .then(() => {
+      context.page.redirect('/supplements');
+    })
+}
+
 function viewPage(cntxt) {
     supplementId = cntxt.params['id'];
     getSupplement(supplementId)
     .then(data => {
         context = cntxt;
+        let supplementData = data;
         let viewModel = {
-            'supplementData': data,
+            supplementData,
+            deleteHandler,
+            isOwner: getUserId() == supplementData['_ownerId'],
         }
   
         let templateResult = supplementDetailsTemplate(viewModel);
   
-        cntxt.renderView(templateResult);
+        // let supplementDetailsContainerElement = document.querySelector('#supplement-details-page');
+
+        // context.renderView(templateResult, supplementDetailsContainerElement);
+        context.renderView(templateResult);
+        
     })
   }
   

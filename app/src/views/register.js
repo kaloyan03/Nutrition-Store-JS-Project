@@ -67,7 +67,11 @@ function viewPage(cntxt) {
     }
 
     let templateResult = registerTemplate(viewModel);
+    // let registerContainerElement = document.querySelector('#register-page');
+
+    // context.renderView(templateResult, registerContainerElement);
     context.renderView(templateResult);
+
 }
 
 export default {

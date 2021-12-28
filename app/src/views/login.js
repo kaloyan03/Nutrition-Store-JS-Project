@@ -60,6 +60,10 @@ function viewPage(cntxt) {
 
 
     let templateResult = loginTemplate(viewModel);
+
+    // let loginContainerElement = document.querySelector('#login-page');
+
+    // context.renderView(templateResult, loginContainerElement);
     context.renderView(templateResult);
 
 }

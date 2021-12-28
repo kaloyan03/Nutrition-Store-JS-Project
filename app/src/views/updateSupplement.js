@@ -87,7 +87,10 @@ function viewPage(cntxt) {
       
           let templateResult = updateSupplementTemplate(viewModel);
       
-          cntxt.renderView(templateResult); 
+          // let updateSupplementContainerElement = document.querySelector('#update-supplement-page');
+
+          // cntxt.renderView(templateResult, updateSupplementContainerElement);
+          context.renderView(templateResult);
     })
 }
 

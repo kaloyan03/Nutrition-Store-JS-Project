@@ -8,10 +8,11 @@ import navigation from './views/navigation.js';
 import addSupplement from './views/addSupplement.js';
 import supplementDetails from './views/supplementDetails.js';
 import updateSupplement from './views/updateSupplement.js';
+import calorieIntakeCalculator from './views/calorieIntakeCalculator.js';
 
 
-let mainContainer = document.querySelector('.main-container');
 let navContainer = document.querySelector('.nav-container');
+let mainContainer = document.querySelector('.main-container');
 
 page(decorateContext);
 page(navigation.viewNav);
@@ -23,6 +24,7 @@ page('/register', register.viewPage);
 page('/add-supplement', addSupplement.viewPage);
 page('/supplements/:id', supplementDetails.viewPage);
 page('/supplements/update/:id', updateSupplement.viewPage);
+page('/calorie-intake-calculator', calorieIntakeCalculator.viewPage);
 
 
 page.start();

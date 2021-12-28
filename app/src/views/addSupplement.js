@@ -82,7 +82,11 @@ function viewPage(cntxt) {
 
   let templateResult = createSupplementTemplate(viewModel);
 
-  cntxt.renderView(templateResult);
+  // let addSupplementContainerElement = document.querySelector('#add-supplement-page');
+
+  // context.renderView(templateResult, addSupplementContainerElement);
+  context.renderView(templateResult);
+
 }
 
 export default {
