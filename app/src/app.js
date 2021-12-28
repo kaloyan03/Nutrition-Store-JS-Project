@@ -9,6 +9,7 @@ import addSupplement from './views/addSupplement.js';
 import supplementDetails from './views/supplementDetails.js';
 import updateSupplement from './views/updateSupplement.js';
 import calorieIntakeCalculator from './views/calorieIntakeCalculator.js';
+import cart from './views/cart.js';
 
 
 let navContainer = document.querySelector('.nav-container');
@@ -25,6 +26,7 @@ page('/add-supplement', addSupplement.viewPage);
 page('/supplements/:id', supplementDetails.viewPage);
 page('/supplements/update/:id', updateSupplement.viewPage);
 page('/calorie-intake-calculator', calorieIntakeCalculator.viewPage);
+page('/my-cart', cart.viewPage);
 
 
 page.start();

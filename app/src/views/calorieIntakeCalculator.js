@@ -1,7 +1,7 @@
 import { html } from '../lib.js';
 
 const calorieIntakeCalculatorTemplate = (model) => html`
-    <section class='calorie-intake-page' style="max-width:1100px; margin:80px auto;">
+    <section class='calorie-intake-page' style="max-width:1100px; margin:80px auto; color:white;">
     <h2 style='text-align: center; color: white;'>BMR Calculator(Daily Calorie Intake)</h2>
   <form class="row g-3">
     <div class="col-md-6">

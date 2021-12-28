@@ -27,9 +27,13 @@ const navTemplate = (model) => html`
         <li class="nav-item">
           <a class="nav-link" href="javascript:void(0)" @click=${model['logoutHandler']}>Logout</a>
         </li>
+        
+        <li class="nav-item">
+          <a class="nav-link ${model['currentPath'] == '/my-cart' ? 'active' : ''}" href="/my-cart" style="position: absolute; right: 45px;">Cart</a>
+        </li>
 
         <li class="nav-item">
-          <p class="nav-link" style="font-weight: bold; position: absolute; right: 40px;">Hello, ${model['email']}</p>
+          <p class="nav-link" style="font-weight: bold; position: absolute; right: 100px;">Hello, ${model['email']}</p>
         </li>
       `
       : html`

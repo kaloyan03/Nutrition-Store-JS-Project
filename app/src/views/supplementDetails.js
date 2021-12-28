@@ -1,11 +1,11 @@
 import { html, nothing } from '../lib.js';
 
 import { getSupplement, deleteSupplement } from '../services/supplementsService.js';
-import { getUserId } from '../utils.js';
+import { getUserId, addSupplementIdToLocalstorage } from '../utils.js';
 
 const supplementDetailsTemplate = (model) => html`
 <section class='supplement-details-page' style="max-width:600px; margin: 50px auto;">
-<h2 style="text-align: center;">Supplement Details</h2>
+<h2 style="text-align: center; color: white;">Supplement Details</h2>
 <div class="card mb-3">
   <img src=${model['supplementData']['image']} class="card-img-top" style="max-width:600px" alt="supplementPhoto">
   <div class="card-body">
@@ -19,7 +19,7 @@ const supplementDetailsTemplate = (model) => html`
     <a class="btn btn-danger" href="javascript:void(0)" @click=${model['deleteHandler']}>Delete</a>
     `
     : nothing}
-    <a class="btn btn-success">Buy</a>
+    <a class="btn btn-success" @click=${model['buyHandler']}>Buy</a>
   </div>
 </div>
 </section>
@@ -35,6 +35,11 @@ function deleteHandler() {
     })
 }
 
+
+function buyHandler() {
+  addSupplementIdToLocalstorage(supplementId);
+}
+
 function viewPage(cntxt) {
     supplementId = cntxt.params['id'];
     getSupplement(supplementId)
@@ -44,6 +49,7 @@ function viewPage(cntxt) {
         let viewModel = {
             supplementData,
             deleteHandler,
+            buyHandler,
             isOwner: getUserId() == supplementData['_ownerId'],
         }
   

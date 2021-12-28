@@ -20,12 +20,31 @@ function getUserId() {
     return sessionStorage.getItem('id');
 }
 
+function getCartSupplements() {
+    return JSON.parse(sessionStorage.getItem('supplementsInCart'));
+}
+
+function addSupplementIdToLocalstorage(supplementId) {
+    let supplements = getCartSupplements();
+
+    if (supplements) {
+        supplements.push(supplementId);
+        sessionStorage.setItem('supplementsInCart', JSON.stringify(supplements))
+
+    } else {
+        let supplements = [ supplementId ]
+        sessionStorage.setItem('supplementsInCart', JSON.stringify(supplements))
+    }
+}
+
 export { 
     saveUserToSessionStorage,
     clearSessionStorage,
     getAccessToken,
     getUserEmail,
     getUserId,
+    getCartSupplements,
+    addSupplementIdToLocalstorage,
 }
 
 

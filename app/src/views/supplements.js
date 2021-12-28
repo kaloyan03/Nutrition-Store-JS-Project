@@ -9,7 +9,7 @@ const supplementTemplate = (supplementData, isAuthorized) => html`
   <img src="${supplementData['image']}" class="card-img-top">
   <div class="card-body">
     <h4 class="card-title">${supplementData['name']}</h4>
-    <p class="card-text" style="font-weight: 500;">Price: ${supplementData['price']}€</p>
+    <p class="card-text" style="font-weight: 500;">Price: €${supplementData['price']}</p>
     <p class="card-text">Category: ${supplementData['category']}</p>
     ${isAuthorized == false
     ? html`

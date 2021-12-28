@@ -3,7 +3,7 @@ import { html } from '../lib.js';
 import { getSupplement, updateSupplement } from '../services/supplementsService.js';
 
 const updateSupplementTemplate = (model) => html`
-<section class='update-supplement-page' style='max-width:1100px; margin:80px auto;'>
+<section class='update-supplement-page' style='max-width:1100px; margin:80px auto; color: white;'>
   <h2 style='text-align: center;'>Update Supplement</h2>
   <form class="row g-3" @submit=${model['submitHandler']}>
     <div class="col-md-6">
@@ -43,6 +43,7 @@ const updateSupplementTemplate = (model) => html`
 
 let context = undefined;
 let supplementId = undefined;
+let _ownerId = undefined;
 
 function updateSupplementSubmitHandler(e) {
     e.preventDefault();
@@ -65,6 +66,7 @@ function updateSupplementSubmitHandler(e) {
         image,
         price,
         _id,
+        _ownerId,
     }
 
     updateSupplement(supplementId, supplement)
@@ -80,9 +82,11 @@ function viewPage(cntxt) {
     supplementId = context.params['id'];
     getSupplement(supplementId)
     .then(data => {
+        _ownerId = data['_ownerId'];
         let viewModel = {
             submitHandler: updateSupplementSubmitHandler,
             supplementData: data,
+            
           }
       
           let templateResult = updateSupplementTemplate(viewModel);
