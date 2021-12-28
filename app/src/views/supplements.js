@@ -35,7 +35,7 @@ const supplementsTemplate = (model) => html`
     ?
     html`${model['supplements'].map(s => supplementTemplate(s, model['isAuthorized']))}`
     :
-    html`<p class="no-supplements">No supplements in database.</p> -->`
+    html`<p class="no-supplements">No supplements in database.</p>`
     }
     </div>
 
