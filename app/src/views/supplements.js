@@ -28,7 +28,7 @@ const supplementTemplate = (supplementData, isAuthorized) => html`
 
 const supplementsTemplate = (model) => html`
     <section class='supplements-page' style='text-align: center;'>
-    <h2 style="margin:30px;">Supplements list</h2>
+    <h2 style="margin:30px; color: white;">Supplements list</h2>
 
     <div class="cards-box" style="display: flex; width: 1200px; margin: 0 auto; flex-direction: row; flex-wrap: wrap;">
     ${model['supplements']

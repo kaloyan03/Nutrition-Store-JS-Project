@@ -5,7 +5,8 @@ import { clearSessionStorage } from '../utils.js';
 import { getAccessToken, getUserEmail } from '../utils.js';
 
 const navTemplate = (model) => html`
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<section class='nav-section'>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">KaliNutrition</a>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -43,6 +44,7 @@ const navTemplate = (model) => html`
     </div>
   </div>
 </nav>
+</section>
 `
 
 let context = undefined;

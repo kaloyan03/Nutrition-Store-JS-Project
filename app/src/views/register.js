@@ -4,7 +4,7 @@ import { registerUser } from '../services/authService.js';
 import { saveUserToSessionStorage } from '../utils.js';
 
 const registerTemplate = (model) => html`
-<section class='register-page' style='text-align:center;  position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);'>
+<section class='register-page' style='text-align:center;  position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);color: white;'>
 <h2 style='margin: 10px;'>Register Page</h2>
 <form @submit=${model['submitHandler']}>
   <div class="mb-3">

@@ -4,7 +4,7 @@ import { saveUserToSessionStorage } from '../utils.js';
 import { loginUser } from '../services/authService.js';
 
 const loginTemplate = (model) => html`
-<section class='login-page' style='text-align:center;  position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);'>
+<section class='login-page' style='text-align:center;  position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); color: white;'>
 <h2 style='margin: 10px;'>Login Page</h2>
 <form @submit=${model['submitHandler']}>
   <div class="mb-3">
