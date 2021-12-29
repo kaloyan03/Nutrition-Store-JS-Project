@@ -37,6 +37,27 @@ function addSupplementIdToLocalstorage(supplementId) {
     }
 }
 
+function removeSupplementIdFromLocalstorage(supplementId) {
+    let supplements = getCartSupplements();
+    let index = undefined;
+    for (let i = 0; i < supplements.length; i++) {
+        if (supplements[i] == supplementId) {
+            index = i;
+            break;
+        }
+    }
+
+    supplements.splice(index, 1);
+    sessionStorage.setItem('supplementsInCart', JSON.stringify(supplements))
+
+}
+
+function removeAllSupplementsFromLocalstorage() {
+    sessionStorage.removeItem('supplementsInCart');
+
+}
+
+
 export { 
     saveUserToSessionStorage,
     clearSessionStorage,
@@ -45,6 +66,8 @@ export {
     getUserId,
     getCartSupplements,
     addSupplementIdToLocalstorage,
+    removeSupplementIdFromLocalstorage,
+    removeAllSupplementsFromLocalstorage,
 }
 
 

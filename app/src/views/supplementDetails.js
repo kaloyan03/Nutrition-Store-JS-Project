@@ -38,6 +38,7 @@ function deleteHandler() {
 
 function buyHandler() {
   addSupplementIdToLocalstorage(supplementId);
+  alert('Added to the cart!');
 }
 
 function viewPage(cntxt) {
