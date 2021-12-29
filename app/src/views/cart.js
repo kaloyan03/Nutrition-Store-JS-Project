@@ -1,6 +1,6 @@
 import { html } from '../lib.js';
 
-import { getCartSupplements, removeSupplementIdFromLocalstorage, removeAllSupplementsFromLocalstorage } from '../utils.js';
+import { getCartSupplements, removeSupplementIdFromLocalstorage, removeAllSupplementsFromLocalstorage, getUserEmail } from '../utils.js';
 import { getSupplements } from '../services/supplementsService.js';
 
 const tbodyTemplate = (product, removeHandler) => html`
@@ -72,6 +72,11 @@ function sendEmailButton() {
   
   if (email == '') {
     alert('Email must be entered');
+    return;
+  }
+
+  if (email !== getUserEmail()) {
+    alert('Your email is not valid!')
     return;
   }
 
