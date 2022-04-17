@@ -4,10 +4,10 @@ import { getSupplement, deleteSupplement } from '../services/supplementsService.
 import { getUserId, addSupplementIdToLocalstorage } from '../utils.js';
 
 const supplementDetailsTemplate = (model) => html`
-<section class='supplement-details-page' style="max-width:600px; margin: 50px auto;">
-<h2 style="text-align: center; color: white;">Supplement Details</h2>
-<div class="card mb-3">
-  <img src=${model['supplementData']['image']} class="card-img-top" style="max-width:600px" alt="supplementPhoto">
+<section class='supplement-details-page'>
+<h2 class='supplement-details-page-title'>Supplement Details</h2>
+<div class="card mb-3 card-container">
+  <img src=${model['supplementData']['image']} class="card-img-top card-container-image" alt="supplementPhoto">
   <div class="card-body">
     <h5 class="card-title">${model['supplementData']['name']}</h5>
     <p class="card-text">Brand: ${model['supplementData']['brand']}</p>

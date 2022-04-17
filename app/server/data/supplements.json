@@ -1,0 +1,52 @@
+{
+   "1":{
+      "brand":"Myprotein",
+      "name":"Impact Whey Protein",
+      "category":"protein",
+      "description":"Premium whey packed with 21g of protein per serving, for the everyday protein you need from a quality source. And where does this whey come from? The same cows that produce your milk and cheese — simply filtered, evaporated, and spray-dried to produce all-natural nutritionals.",
+      "image":"https://static.thcdn.com/images/large/original//productimg/1600/1600/10530943-1504726884876366.jpg",
+      "price":"19.99",
+      "_id":"1",
+	"_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8"
+   },
+   "2":{
+      "brand":"AMIX",
+      "name":"AMIX Whey Pure Fusion",
+      "category":"protein",
+      "description":"AMIX Whey Pure Fusion is a highly concentrated protein with a 75% proportion of pure proteins - whey concentrateand whey isolatewhich are made by CFM method. It also has BCAA which stimulate muscle protein synthesis and support healthy and efficient muscle growth. They can also decrease muscle soreness and reduce muscle damage during exercise.",
+      "image":"https://www.silabg.com/uf/product/11568_pm_fus.jpg",
+      "price":"21",
+      "_id":"2",
+	"_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8"
+   },
+   "3":{
+      "brand":"Myprotein",
+      "name":"Creatine Monohydrate Powder",
+      "category":"creatine",
+      "description":"A popular ingredient in many all-in-one sports supplements, creatine increases your body’s ability to produce energy quickly.1 Creatine already exists in small amounts in our bodies naturally, but lots of people take it as a supplement to boost their performance in the gym.",
+      "image":"https://static.thcdn.com/images/large/webp/productimg/1600/1600/10530050-9574620647469231.jpg",
+      "price":"10",
+      "_id":"3",
+	"_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8"
+   },
+   "4":{
+      "brand":"Pure Nutrition",
+      "name":"PURE NUTRITION 100% WHEY PROTEIN - 2272 G",
+      "description":"Pure Whey is a fast-acting and delicious protein powder containing the three best forms of whey protein: whey protein isolate, whey protein concentrate, and whey protein hydrolysate. Since amino acids are the building blocks of proteins, and muscle tissue is largely protein, Pure Whey serves as a superb way to support muscle tissue growth and repair.",
+      "category":"protein",
+      "image":"https://bbteamcdn.com/shop/skus/large/1920_1.jpg",
+      "price":"50",
+      "_id":"4",
+	"_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8"
+   },
+   "5":{
+      "brand":"Biotech USA",
+      "name":"PURE NUTRITION 100% WHEY PROTEIN - 2272 G",
+      "description":"A quick, convenient and highly effective way to supplement your protein intake is to drink protein supplements; all you need is protein powder, a shaker and some water or milk. Protein powder can be derived from milk, as well as from animal or plant sources or their combination. Their absorption can be fast (30-40 minutes), moderate (1-2 hours) or slow (more than 2 hours). Like all BioTech USA products, Iso Whey Zero consists of safe and carefully selected ingredients.",
+      "category":"protein",
+      "image":"http://powerlife.bg/media/7/3211.jpg",
+      "price":"65",
+      "_id":"5",
+	"_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8"
+   }
+}

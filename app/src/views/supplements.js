@@ -5,8 +5,8 @@ import { getAccessToken } from '../utils.js';
 
 
 const supplementTemplate = (supplementData, isAuthorized) => html`
-<div class="card" style="width: 18rem; margin:40px;">
-  <img src="${supplementData['image']}" class="card-img-top">
+<div class="card">
+  <img src="${supplementData['image']}" class="card-img-top card-img">
   <div class="card-body">
     <h4 class="card-title">${supplementData['name']}</h4>
     <p class="card-text" style="font-weight: 500;">Price: €${supplementData['price']}</p>

@@ -8,7 +8,7 @@ const navTemplate = (model) => html`
 <section class='nav-section'>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">KaliNutrition</a>
+    <a class="navbar-brand" href="/supplements">KaliNutrition</a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -33,7 +33,7 @@ const navTemplate = (model) => html`
         </li>
 
         <li class="nav-item">
-          <p class="nav-link" style="font-weight: bold; position: absolute; right: 100px;">Hello, ${model['email']}</p>
+          <p class="nav-link greeting">Hello, ${model['email']}</p>
         </li>
       `
       : html`
