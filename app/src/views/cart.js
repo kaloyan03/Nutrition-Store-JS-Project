@@ -57,7 +57,7 @@ const cartTemplate = (model) => html`
 
 let context = undefined;
 let myProductsObj = {};
-
+let totalSum = 0;
 
 function removeButtonHandler(e) {
   let productToRemoveId = e.target.getAttribute('dataset-id');
@@ -102,8 +102,7 @@ function sendEmailButton() {
 
 function viewPage(cntxt) {
     context = cntxt;
-    let totalSum = 0;
-
+    totalSum = 0;
 
     getSupplements()
     .then(supplements => {
