@@ -15,11 +15,11 @@ const tbodyTemplate = (product, removeHandler) => html`
 `
 
 const cartTemplate = (model) => html`
-<section class="cart-page" style="color: white;max-width:1100px; margin:80px auto;">
-    <h2 style="text-align: center;">My cart</h2>
+<section class="cart-page">
+    <h2 class='cart-page-title'>My cart</h2>
     ${model['products'].length !== 0
     ? html`
-    <table class="table" style="color:white; height: 300px" >
+    <table class="table" style="height: 300px" >
   <thead>
     <tr>
       <th scope="col">Image</th>
@@ -50,14 +50,13 @@ const cartTemplate = (model) => html`
   </article>
     `
     : html`
-    <h3 style="text-align: center; margin-top:100px";>There are no products yet.</h3>
+    <h3 class='no-products-message'>There are no products yet.</h3>
     `}
 </section>
 `
 
 let context = undefined;
 let myProductsObj = {};
-let totalSum = 0;
 
 
 function removeButtonHandler(e) {
@@ -103,6 +102,8 @@ function sendEmailButton() {
 
 function viewPage(cntxt) {
     context = cntxt;
+    let totalSum = 0;
+
 
     getSupplements()
     .then(supplements => {

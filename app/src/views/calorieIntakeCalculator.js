@@ -1,24 +1,24 @@
 import { html } from '../lib.js';
 
 const calorieIntakeCalculatorTemplate = (model) => html`
-    <section class='calorie-intake-page' style="max-width:1100px; margin:80px auto; color:white;">
-    <h2 style='text-align: center; color: white;'>BMR Calculator(Daily Calorie Intake)</h2>
+    <section class='calorie-intake-page'>
+    <h2 class='calorie-intake-page-title'>BMR Calculator(Daily Calorie Intake)</h2>
   <form class="row g-3">
     <div class="col-md-6">
-      <label for="weight" class="form-label" style="color: white;">Weight</label>
+      <label for="weight" class="form-label">Weight</label>
       <input type="text" name="weight" class="form-control" id="weight">
     </div>
     <div class="col-md-6">
-      <label for="height" class="form-label" style="color: white;">Height</label>
+      <label for="height" class="form-label">Height</label>
       <input type="text" name="height" class="form-control" id="height">
     </div>
     <div class="col-md-6">
-      <label for="age" class="form-label" style="color: white;">Age</label>
+      <label for="age" class="form-label">Age</label>
       <input type="text" name="age" class="form-control" id="age">
     </div>
     
     <div class="col-md-4">
-      <label for="activity" class="form-label" style="color: white;">Activity</label>
+      <label for="activity" class="form-label">Activity</label>
       <select id="activity" name="activity" class="form-select">
         <option selected>Choose...</option>
         <option dataset-type="sedentary">Sedentary: little or no exercise</option>
@@ -30,7 +30,7 @@ const calorieIntakeCalculatorTemplate = (model) => html`
     </div>
 
     <div class="col-md-4">
-      <label for="gender" class="form-label" style="color: white;">Gender</label>
+      <label for="gender" class="form-label">Gender</label>
       <select id="gender" name="gender" class="form-select">
         <option selected>Choose...</option>
         <option>Male</option>
@@ -43,7 +43,7 @@ const calorieIntakeCalculatorTemplate = (model) => html`
       <button type="submit" class="btn btn-primary" @click=${model['clickHandler']}>Calculate</button>
     </div>
 
-    <div id='result-div' style="margin-top: 100px; text-align: center;">
+    <div id='result-div'>
         <h3 id='result'></h3>
     </div>
   <form class="row g-3">

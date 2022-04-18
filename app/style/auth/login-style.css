@@ -1,0 +1,20 @@
+.login-page {
+    background-color: rgb(245, 245, 245);
+    color: black;
+    width: 30vw;
+    padding: 30px;
+    border-radius: 14px;
+    margin: 0 auto;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.login-page-title {
+    margin: 10px;
+}
+
+.login-page input.input-field {
+    width:20vw; 
+    margin:0 auto;
+}
+

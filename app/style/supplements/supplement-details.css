@@ -1,0 +1,19 @@
+/* supplement detail style */
+
+section.supplement-details-page {
+    max-width:600px;
+    margin: 50px auto;
+}
+
+.supplement-details-page .supplement-details-page-title {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.card-container .card-container-image {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* end supplement detail style */

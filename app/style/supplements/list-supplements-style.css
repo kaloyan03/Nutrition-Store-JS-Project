@@ -1,0 +1,40 @@
+/* list supplements page style */
+.supplements-page .card {
+    width: 16vw;
+}
+
+.supplements-page .cards-box {
+    display: flex;
+    width: 55vw;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    gap: 3vw;
+    margin: 0 auto;
+}
+
+.supplements-page .card .card-img {
+    width: 100%;
+}
+
+.supplements-page .supplements-page-title {
+    margin:30px;
+    color: white; 
+    text-align: center;
+}
+
+.supplements-page .card .card-text.price {
+    font-weight: bold;
+}
+
+.supplements-page .card .details-btn.disabled {
+    cursor: not-allowed;
+    pointer-events: none;color:#fff;
+    border-color: #a0a0a0;
+    background-color: #a0a0a0;
+}
+
+.supplements-page .card .access-button-message {
+    margin-top:20px;
+}
+
+/* end list supplements page style */

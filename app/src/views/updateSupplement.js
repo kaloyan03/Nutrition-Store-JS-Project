@@ -3,7 +3,7 @@ import { html } from '../lib.js';
 import { getSupplement, updateSupplement } from '../services/supplementsService.js';
 
 const updateSupplementTemplate = (model) => html`
-<section class='update-supplement-page' style='max-width:1100px; margin:80px auto; color: white;'>
+<section class='update-supplement-page'>
   <h2 style='text-align: center;'>Update Supplement</h2>
   <form class="row g-3" @submit=${model['submitHandler']}>
     <div class="col-md-6">

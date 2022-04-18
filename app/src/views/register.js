@@ -4,21 +4,21 @@ import { registerUser } from '../services/authService.js';
 import { saveUserToSessionStorage } from '../utils.js';
 
 const registerTemplate = (model) => html`
-<section class='register-page' style='text-align:center;  position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);color: white;'>
+<section class='register-page'>
 <h2 style='margin: 10px;'>Register Page</h2>
 <form @submit=${model['submitHandler']}>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style='width:400px; margin:0 auto;'>
+    <input type="email" name="email" class="form-control input-field" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" name="password" class="form-control" id="exampleInputPassword1" style='width:400px; margin:0 auto;'>
+    <input type="password" name="password" class="form-control input-field" id="exampleInputPassword1">
   </div>
 
   <div class="mb-3">
     <label for="confirmPassword" class="form-label">Confirm Password</label>
-    <input type="password" name="confirmPassword" class="form-control" id="confirmPassword" style='width:400px; margin:0 auto;'>
+    <input type="password" name="confirmPassword" class="form-control input-field" id="confirmPassword">
   </div>
   <button type="submit" class="btn btn-primary">Sign Up</button>
 </form>

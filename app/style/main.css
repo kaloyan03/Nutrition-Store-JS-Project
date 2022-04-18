@@ -1,0 +1,54 @@
+@import "/style/auth/register-style.css";
+@import "/style/auth/login-style.css";
+@import "/style/calorie-intake-style.css";
+@import "/style/supplements/list-supplements-style.css";
+@import "/style/supplements/supplement-details.css";
+@import "/style/supplements/add-supplement-style.css";
+@import "/style/cart-style.css";
+@import "/style/supplements/update-supplement.css";
+
+
+body {
+    background-image: url('../src/images/product-hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+
+footer {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+footer .footer-content {
+    color: white;
+    text-align: center;
+    margin: 12px;
+}
+
+
+
+/* nav style */
+nav .nav-link.greeting {
+    font-weight: bold;
+    position: absolute;
+    right: 100px;
+}
+
+/* end nav style */

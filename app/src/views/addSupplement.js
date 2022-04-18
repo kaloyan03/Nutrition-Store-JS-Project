@@ -2,21 +2,21 @@ import { html } from '../lib.js';
 
 import { addSupplement } from '../services/supplementsService.js';
 
-const createSupplementTemplate = (model) => html`
-<section class='create-supplement-page' style='max-width:1100px; margin:80px auto; color: white;'>
-  <h2 style='text-align: center;'>Add Supplement</h2>
+const addSupplementTemplate = (model) => html`
+<section class='add-supplement-page'>
+  <h2 class='add-supplement-page-title'>Add Supplement</h2>
   <form class="row g-3" @submit=${model['submitHandler']}>
     <div class="col-md-6">
       <label for="supplement-brand" class="form-label">Brand</label>
-      <input type="text" name="brand" class="form-control" id="supplement-brand">
+      <input type="text" name="brand" class="form-control input-field" id="supplement-brand">
     </div>
     <div class="col-md-6">
       <label for="supplement-name" class="form-label">Name</label>
-      <input type="text" name="name" class="form-control" id="supplement-name">
+      <input type="text" name="name" class="form-control input-field" id="supplement-name">
     </div>
     <div class="col-md-6">
       <label for="supplement-description" class="form-label">Description</label>
-      <textarea class="form-control" name="description" id="supplement-description"></textarea>
+      <textarea class="form-control input-field" name="description" id="supplement-description"></textarea>
     </div>
     <div class="col-md-4">
       <label for="supplement-category" class="form-label">Category</label>
@@ -28,12 +28,12 @@ const createSupplementTemplate = (model) => html`
     </div>
     <div class="col-md-6">
       <label for="supplement-image" class="form-label">Image Url</label>
-      <input type="text" name="image" class="form-control" id="supplement-image">
+      <input type="text" name="image" class="form-control input-field" id="supplement-image">
     </div>
 
     <div class="col-md-6">
       <label for="supplement-price" class="form-label">Price</label>
-      <input type="text" name="price" class="form-control" id="supplement-price">
+      <input type="text" name="price" class="form-control input-field" id="supplement-price">
     </div>
 
     <div class="col-12">
@@ -80,7 +80,7 @@ function viewPage(cntxt) {
       submitHandler: addSupplementSubmitHandler,
   }
 
-  let templateResult = createSupplementTemplate(viewModel);
+  let templateResult = addSupplementTemplate(viewModel);
 
   // let addSupplementContainerElement = document.querySelector('#add-supplement-page');
 
