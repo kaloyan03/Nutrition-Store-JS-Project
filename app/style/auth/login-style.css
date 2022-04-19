@@ -1,6 +1,4 @@
 .login-page {
-    background-color: rgb(245, 245, 245);
-    color: black;
     width: 30vw;
     padding: 30px;
     border-radius: 14px;
@@ -10,7 +8,7 @@
 }
 
 .login-page-title {
-    margin: 10px;
+    margin-bottom: 26px;
 }
 
 .login-page input.input-field {

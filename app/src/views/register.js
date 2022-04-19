@@ -5,7 +5,7 @@ import { saveUserToSessionStorage } from '../utils.js';
 
 const registerTemplate = (model) => html`
 <section class='register-page'>
-<h2 style='margin: 10px;'>Register Page</h2>
+<h2 class='register-page-title'>Register Page</h2>
 <form @submit=${model['submitHandler']}>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>

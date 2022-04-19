@@ -1,6 +1,4 @@
 .register-page {
-    background-color: rgb(245, 245, 245);
-    color: black;
     width: 30vw;
     padding: 30px;
     border-radius: 14px;
@@ -12,4 +10,8 @@
 .register-page input.input-field {
     width:400px; 
     margin:0 auto;
+}
+
+.register-page .register-page-title {
+    margin-bottom: 26px;
 }

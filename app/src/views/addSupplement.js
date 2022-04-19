@@ -1,6 +1,7 @@
 import { html } from '../lib.js';
 
 import { addSupplement } from '../services/supplementsService.js';
+import { getUserId } from '../utils.js';
 
 const addSupplementTemplate = (model) => html`
 <section class='add-supplement-page'>
@@ -56,6 +57,7 @@ function addSupplementSubmitHandler(e) {
     let category = formData.get('category');
     let image = formData.get('image');
     let price = Number(formData.get('price'));
+    let ownerId = getUserId();
     
     let supplement = {
         brand,
@@ -64,6 +66,7 @@ function addSupplementSubmitHandler(e) {
         category,
         image,
         price,
+        _ownerId: ownerId,
     }
 
     addSupplement(supplement)

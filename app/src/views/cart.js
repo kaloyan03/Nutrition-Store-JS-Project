@@ -4,8 +4,8 @@ import { getCartSupplements, removeSupplementIdFromLocalstorage, removeAllSupple
 import { getSupplements } from '../services/supplementsService.js';
 
 const tbodyTemplate = (product, removeHandler) => html`
-<tr>
-      <td><img src="${product['image']}" style="max-width: 150px;"></td>
+<tr class='product'>
+      <td><img src="${product['image']}" class='product-img'></td>
       <td>${product['name']}</td>
       <td>${product['category']}</td>
       <td>${product['quantity']}</td>
@@ -19,7 +19,7 @@ const cartTemplate = (model) => html`
     <h2 class='cart-page-title'>My cart</h2>
     ${model['products'].length !== 0
     ? html`
-    <table class="table" style="height: 300px" >
+    <table class="table">
   <thead>
     <tr>
       <th scope="col">Image</th>
@@ -45,8 +45,8 @@ const cartTemplate = (model) => html`
 </table>
   <article style="text-align: center; margin-top:50px;">
     <h4>Please, verify your email to send you more details about your order!</h4>
-    <input class="form-control" id="email" style="width:380px; margin: 0 auto;" type='text'>
-    <button class="btn btn-success" style="margin-top: 20px;" @click=${model['sendHandler']}>Send</button>
+    <input class="form-control email-verify-field" id="email" type='text'>
+    <button class="btn btn-success email-send-information-button" @click=${model['sendHandler']}>Send</button>
   </article>
     `
     : html`

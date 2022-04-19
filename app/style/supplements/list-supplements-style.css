@@ -1,6 +1,7 @@
 /* list supplements page style */
 .supplements-page .card {
     width: 16vw;
+    text-align: center;
 }
 
 .supplements-page .cards-box {
